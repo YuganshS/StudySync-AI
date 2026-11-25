@@ -1,6 +1,6 @@
 // src/components/auth/AuthLayout.tsx
-import Image from 'next/image';
 import Link from 'next/link';
+import { BrandLogo } from '@/components/BrandLogo';
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -15,13 +15,7 @@ export function AuthLayout({ children, title, description }: AuthLayoutProps) {
       <div className="relative hidden h-full flex-col bg-[#2a358c] p-10 text-white lg:flex dark:border-r">
         <div className="absolute inset-0 bg-zinc-900/40" />
         <Link href="/" className="relative z-20 flex items-center text-2xl font-bold">
-          <Image
-            src="/assets/images/rcpit-logo.png"
-            alt="StudySync AI Logo"
-            width={50}
-            height={50}
-            className="mr-3 rounded-full"
-          />
+          <BrandLogo className="mr-3 h-12 w-12" />
           StudySync AI
         </Link>
         <div className="relative z-20 mt-auto">
@@ -29,7 +23,7 @@ export function AuthLayout({ children, title, description }: AuthLayoutProps) {
             <p className="text-lg">
               “The best way to predict the future is to create it. Our platform helps educators build the future of learning, one student at a time.”
             </p>
-            <footer className="text-sm">RCPIT Institute</footer>
+            <footer className="text-sm">StudySync AI</footer>
           </blockquote>
         </div>
       </div>

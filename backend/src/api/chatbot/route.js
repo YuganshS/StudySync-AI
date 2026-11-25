@@ -2,7 +2,7 @@
 
 import clientPromise from "../../lib/mongodb.js";
 
-import { RCPIT_TRAINING } from "./aiTraining.js";
+import { STUDYSYNC_TRAINING } from "./aiTraining.js";
 
 
 
@@ -132,13 +132,13 @@ You can view or download the file directly using this link:
     }
 
     const prompt = `
-      You are StudySync AI, a helpful college assistant for RCPIT.
-      Use your PERMANENT TRAINING for general college info.
+      You are StudySync AI, a helpful study assistant.
+      Use your PERMANENT TRAINING to guide your behavior.
       Use the retrieved CONTEXT to answer questions about specific uploaded documents.
       Be helpful and concise.
 
       PERMANENT TRAINING:
-      ${RCPIT_TRAINING}
+      ${STUDYSYNC_TRAINING}
 
       CONTEXT:
       ---
@@ -152,7 +152,7 @@ You can view or download the file directly using this link:
     try {
       const responseAI = await runCloudflareAI('@cf/meta/llama-3.1-8b-instruct-fp8', {
         messages: [
-          { role: 'system', content: 'You are StudySync AI, a helpful college assistant for RCPIT. Be helpful and concise.' },
+          { role: 'system', content: 'You are StudySync AI, a helpful study assistant. Be helpful and concise.' },
           { role: 'user', content: prompt },
         ],
         max_tokens: 512,
@@ -160,7 +160,7 @@ You can view or download the file directly using this link:
       aiResponse = responseAI.result.response;
     } catch (aiError) {
       console.error("AI generation failed:", aiError);
-      aiResponse = "I'm experiencing technical difficulties with my AI capabilities right now. However, based on general RCPIT information, I can help with basic queries about exams, notices, and schedules. Please try rephrasing your question or check back later.";
+      aiResponse = "I'm experiencing technical difficulties with my AI capabilities right now. Please try rephrasing your question or check back later.";
     }
   
     return res.status(200).json({ reply: aiResponse });

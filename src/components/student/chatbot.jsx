@@ -196,7 +196,7 @@ export default function Chatbot() {
           border-color: #f1f5f9;
         }
 
-        .college-badge {
+        .brand-badge {
           background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
           animation: float 3s ease-in-out infinite;
         }
@@ -230,12 +230,12 @@ export default function Chatbot() {
           scrollbar-width: none;
         }
 
-        .college-header {
+        .brand-header {
           background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%);
           border-bottom: 3px solid #1e3a8a;
         }
 
-        .college-header-dark {
+        .brand-header-dark {
           background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
           border-bottom: 3px solid #0f172a;
         }
@@ -250,9 +250,9 @@ export default function Chatbot() {
       `}</style>
 
       <div className={containerClass} style={containerStyle}>
-        {/* Header - Classic College Style */}
+        {/* Header - StudySync AI Style */}
         <div
-          className={isDark ? 'college-header-dark' : 'college-header'}
+          className={isDark ? 'brand-header-dark' : 'brand-header'}
           style={{ padding: '1.25rem 1.5rem' }}
         >
           <div className="flex items-center justify-between">
@@ -265,7 +265,7 @@ export default function Chatbot() {
                   StudySync AI
                 </p>
                 <p className="text-sm text-blue-100 dark:text-slate-300 font-medium">
-                  Teacher Portal • Academic Assistant
+                  Student Portal • AI Study Assistant
                 </p>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function Chatbot() {
           {messages.length === 0 && (
             <div className="mt-12 text-center px-4">
               <div className="inline-block mb-8">
-                <div className="w-24 h-24 rounded-full college-badge flex items-center justify-center shadow-xl border-4 border-white dark:border-slate-700">
+                <div className="w-24 h-24 rounded-full brand-badge flex items-center justify-center shadow-xl border-4 border-white dark:border-slate-700">
                   <GraduationCap className="w-12 h-12 text-white" />
                 </div>
               </div>
@@ -296,22 +296,22 @@ export default function Chatbot() {
                 Welcome to StudySync AI
               </h3>
               <p className="text-base text-slate-600 dark:text-slate-400 mb-2 font-medium">
-                Teacher Portal
+                Student Portal
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Your comprehensive academic assistant for teaching, assessments, and student support. Ask questions, generate materials, or get pedagogical guidance.
+                Your AI study companion for the material shared by your teachers. Ask questions, get clear explanations, and revise any topic faster.
               </p>
               <div className="mt-6 inline-flex flex-col gap-3 max-w-2xl">
                 <div className="group px-6 py-4 border-2 border-blue-200 dark:border-blue-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-sm font-medium cursor-pointer hover:border-blue-900 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300 academic-accent dark:academic-accent-dark">
                   <span className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-blue-900 dark:bg-blue-500"></span>
-                    Explain Newton's laws in simple terms for my students
+                    Explain Newton's laws in simple terms
                   </span>
                 </div>
                 <div className="group px-6 py-4 border-2 border-blue-200 dark:border-blue-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 text-sm font-medium cursor-pointer hover:border-blue-900 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300 academic-accent dark:academic-accent-dark">
                   <span className="flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-blue-900 dark:bg-blue-500"></span>
-                    Generate 5 multiple-choice questions on Chapter 2
+                    Quiz me on the key points from Chapter 2
                   </span>
                 </div>
               </div>

@@ -5,19 +5,8 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { BookOpen, Upload, Bell, Users, Brain, Shield, ArrowRight } from 'lucide-react'
 import { HydrationHandler } from '@/components/HydrationHandler'
-import Image from 'next/image'
+import { BrandLogo } from '@/components/BrandLogo'
 import { motion } from 'framer-motion' 
-
-// RCPIT Logo Component
-const RcpitLogo = () => (
- <Image
-    src="/assets/images/rcpit-logo.png"
-    alt="RCPIT Logo"
-    width={70}
-    height={70}
-    className="rounded-full"
-  />
-);
 
 export default function HomePage() {
   const fadeInUp = {
@@ -40,7 +29,7 @@ export default function HomePage() {
         <header className="sticky top-0 z-50 bg-yellow-50/90 backdrop-blur-lg border-b border-yellow-200/80 shadow-sm">
           <div className="container mx-auto px-6 py-3 flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3">
-              <RcpitLogo />
+              <BrandLogo className="h-[70px] w-[70px]" />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-[#2a358c]">StudySync AI</span>
               </div>
@@ -197,7 +186,7 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
               <div>
                 <Link href="/" className="flex items-center justify-center md:justify-start space-x-3 mb-4 md:mb-0">
-                  <RcpitLogo />
+                  <BrandLogo className="h-[70px] w-[70px]" />
                   <span className="text-xl font-bold text-white">StudySync AI</span>
                 </Link>
               </div>

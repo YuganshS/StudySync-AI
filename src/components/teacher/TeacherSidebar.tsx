@@ -1,8 +1,8 @@
 'use client'
 
 import { signOut } from 'next-auth/react'
-import Image from 'next/image' // 1. Import the Next.js Image component
 import { cn } from '@/lib/utils'
+import { BrandLogo } from '@/components/BrandLogo'
 import { Button } from '@/components/ui/button'
 import { 
   LayoutDashboard, 
@@ -14,16 +14,6 @@ import {
   LogOut,
   Brain
 } from 'lucide-react'
-
-const RcpitLogo = () => (
-  <Image
-    src="/assets/images/rcpit-logo.png"
-    alt="RCPIT Logo"
-    width={40}
-    height={40}
-    className="rounded-full"
-  />
-);
 
 type DashboardSection = 'overview' | 'upload' | 'materials' | 'notices' | 'students' | 'settings'
 
@@ -52,7 +42,7 @@ export function TeacherSidebar({ activeSection, onSectionChange }: TeacherSideba
       {/* Header */}
       <div className="p-4 border-b border-gray-200">
         <div className="flex items-center space-x-3">
-          <RcpitLogo />
+          <BrandLogo className="h-10 w-10" />
           <div>
             <h1 className="text-lg font-bold text-[#2a358c]">StudySync AI</h1>
             <p className="text-sm text-gray-500 -mt-1">Teacher Portal</p>
